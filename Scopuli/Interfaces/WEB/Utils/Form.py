@@ -19,7 +19,7 @@ from flask import request
 from flask import g as context
 from flask import abort
 
-import Interfaces.MySQL as MySQL
+import Scopuli.Interfaces.MySQL as MySQL
 
 
 class WebForm:

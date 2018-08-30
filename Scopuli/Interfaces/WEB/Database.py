@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright [2017] Tatarnikov Viktor [viktor@tatarnikov.org]
+# Copyright [2018] Tatarnikov Viktor [viktor@tatarnikov.org]
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,6 +14,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+""" """
 
 import logging
 import time
@@ -22,7 +23,7 @@ from flask import request
 from flask import g as context
 from flask import abort
 
-import Interfaces.MySQL as MySQL
+from Scopuli.Interfaces.MySQL.SQLAlchemy.Utils import init, init_fast
 
 
 log = logging.getLogger(__name__)
@@ -56,7 +57,7 @@ class WebDatabase:
                 if database is None:
                     log.info("{}: Request Inicialise.".format(self._instance_name))
 
-                    request._4g_database = MySQL.init_fast(self._config)()
+                    request._4g_database = init_fast(self._config)()
     
     def _context_init(self):
         database = getattr(self, WebDatabase._instance_sid, None)
@@ -67,11 +68,11 @@ class WebDatabase:
             if bool(int(self._config.get("database", "", "use_inicialise", "0"))):
                 log.debug("{}: Context Inicialise: Use full mode.".format(self._instance_name))
                 
-                self._4g_database = MySQL.init(self._config)()
+                self._4g_database = init(self._config)()
             else:
                 log.debug("{}: Context Inicialise: Use fast mode.".format(self._instance_name))
                 
-                self._4g_database = MySQL.init_fast(self._config)()
+                self._4g_database = init_fast(self._config)()
             
             
     def request_get(self):

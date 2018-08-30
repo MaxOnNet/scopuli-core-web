@@ -15,6 +15,48 @@
       <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces/WEB/Utils" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces/WEB/SQLAlchemy/Paginator" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/DebugToolbar" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Widgets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/AITrade" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Blog" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Club" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/ELink" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Hooks" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Hotel" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/MyHome" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Shop" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/DebugToolbar/Panels" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces/MySQL/Schema/Web/Module/Blog" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces/MySQL/Schema/Web/Module/Cart" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces/MySQL/Schema/Web/Module/Catalog" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces/MySQL/Schema/Web/Module/Session" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces/MySQL/Schema/Web/Module/Vacancy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces/MySQL/Schema/Web/Widget/Menu" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces/MySQL/Schema/Web/Widget/Social" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces/MySQL/Schema/Web/Core" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces/MySQL/Schema/Core" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/Interfaces/MySQL/SQLAlchemy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Application" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Account" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Analytics" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Catalog" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Cart" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Contacts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Errors" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Pages" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Payment" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Permissions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Robots" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Session" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Search" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Sitemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Scopuli/WEB/Modules/Vacancy" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/build" />
+      <excludeFolder url="file://$MODULE_DIR$/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/scopuli_core_web.egg-info" />
+      <excludeFolder url="file://$MODULE_DIR$/tests" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

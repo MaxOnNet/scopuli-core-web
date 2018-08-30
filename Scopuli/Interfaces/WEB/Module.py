@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright [2017] Tatarnikov Viktor [viktor@tatarnikov.org]
+# Copyright [2018] Tatarnikov Viktor [viktor@tatarnikov.org]
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,13 +14,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+""" """
 
 from werkzeug.local import LocalProxy
 from importlib import import_module
-from flask import jsonify
 
-import Interfaces.MySQL.Schema as Schema
-import Utils as WebUtils
+# Interfaces
+from . import Utils as WebUtils
 
 
 class WebModule:
@@ -124,7 +124,8 @@ class WebModule:
 
     @staticmethod
     def module_load(page):
-        module = getattr(import_module("WEB.Modules"), page.code)
+        module_list = page.application._config.get("web", "application", "module_list", "Scopuli.WEB.Application.Modules")
+        module = getattr(import_module(module_list), page.code)
     
         if module:
             return module(page.application, page)
@@ -132,10 +133,12 @@ class WebModule:
         return None
 
     def make_url(self, module_name, module_value, module_prefix="/"):
-        query = self._database.query(Schema.WebPage)
-        query = query.filter(Schema.WebPage.cd_web_site == self._site.id)
-        query = query.filter(Schema.WebPage.is_enable == 1)
-        query = query.filter(Schema.WebPage.code == module_name)
+        from Scopuli.Interfaces.MySQL.Schema.Web.Core import WebPage as dbWebPage
+        
+        query = self._database.query(dbWebPage)
+        query = query.filter(dbWebPage.cd_web_site == self._site.id)
+        query = query.filter(dbWebPage.is_enable == 1)
+        query = query.filter(dbWebPage.code == module_name)
 
         for module in query.all():
             return "{}{}{}".format(module.url, module_prefix, module_value)

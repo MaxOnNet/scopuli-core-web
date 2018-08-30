@@ -15,10 +15,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from .Blog import *
-from .Cart import *
-from .Catalog import *
-from .Payment import *
-from .Session import *
-from .Vacancy import *
-from .Hotel import *
+__import__('pkg_resources').declare_namespace(__name__)
+

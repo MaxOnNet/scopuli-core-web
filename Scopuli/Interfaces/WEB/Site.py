@@ -20,8 +20,8 @@ from flask import request
 
 from werkzeug.local import LocalProxy
 
-import Interfaces.MySQL.Schema as Schema
-import Interfaces.WEB.Page
+# Interfaces
+from . import WebPage
 
 
 class WebSite:
@@ -58,9 +58,10 @@ class WebSite:
             self.load()
 
     def load(self, db_site=None):
+        from Scopuli.Interfaces.MySQL.Schema.Web.Core import WebSite as dbWebSite
         if db_site is None:
-            query = self._database.query(Schema.WebSite)
-            query = query.filter(Schema.WebSite.id == self._id)
+            query = self._database.query(dbWebSite)
+            query = query.filter(dbWebSite.id == self._id)
             self._sql = query.first()
         else:
             self._sql = db_site
@@ -84,7 +85,7 @@ class WebSite:
             self._meta_copyrights = self._sql.meta_copyrights
 
             for db_page in self._sql.pages:
-                self._pages.append(Interfaces.WEB.Page(application=self._application, page_id=db_page.id, page_load=False).load(db_page=db_page))
+                self._pages.append(WebPage(application=self._application, page_id=db_page.id, page_load=False).load(db_page=db_page))
         
         return self
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright [2017] Tatarnikov Viktor [viktor@tatarnikov.org]
+# Copyright [2018] Tatarnikov Viktor [viktor@tatarnikov.org]
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,13 +14,14 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+""" """
 
 from flask import request
 from datetime import datetime
 from werkzeug.local import LocalProxy
 
-import Interfaces.MySQL.Schema as Schema
-import Interfaces.WEB.Module
+# Interfaces
+from . import WebModule
 
 
 class WebPage:
@@ -64,9 +65,10 @@ class WebPage:
             self.load()
 
     def load(self, db_page=None):
+        from Scopuli.Interfaces.MySQL.Schema.Web.Core import WebPage as dbWebPage
         if db_page is None:
-            query = self._database.query(Schema.WebPage)
-            query = query.filter(Schema.WebPage.id == self._id)
+            query = self._database.query(dbWebPage)
+            query = query.filter(dbWebPage.id == self._id)
             self._sql = query.first()
         else:
             self._sql = db_page
@@ -232,7 +234,7 @@ class WebPage:
     @property
     def module(self):
         if not self._module:
-            self._module = Interfaces.WEB.Module.module_load(self)
+            self._module = WebModule.module_load(self)
             
         return self._module
     
