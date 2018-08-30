@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright [2017] Tatarnikov Viktor [viktor@tatarnikov.org]
+# Copyright [2018] Tatarnikov Viktor [viktor@tatarnikov.org]
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,5 +16,8 @@
 # limitations under the License.
 """ """
 
-__import__('pkg_resources').declare_namespace(__name__)
+from Scopuli.WEB.Widgets.Cart import WebWidgetCart as WebWidgetCart
+from Scopuli.WEB.Widgets.Menu import WebWidgetMenu as WebWidgetMenu
+from Scopuli.WEB.Widgets.Social import WebWidgetSocial as WebWidgetSocial
 
+from Scopuli.WEB.Widgets.Blog import WebWidgetBlog as WebWidgetBlog

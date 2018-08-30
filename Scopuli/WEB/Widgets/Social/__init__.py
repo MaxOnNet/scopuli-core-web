@@ -18,7 +18,7 @@
 
 
 from Scopuli.Interfaces.WEB.Widget import WebWidget
-import Interfaces.MySQL.Schema.Web.Widget.Social as Schema
+import Scopuli.Interfaces.MySQL.Schema.Web.Widget.Social as Schema
 
 
 class WebWidgetSocial(WebWidget):

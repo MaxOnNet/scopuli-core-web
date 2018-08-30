@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <database use_synchronizer="0" use_inicialise="1">
+        <!-- All -->
+        <mysql database="db_ncplg" password="HReQ6PuWf7yW9t" server="10.19.2.20" user="ncplg" charset="utf8" />
+    </database>
+
+    <logging use_file="0" use_syslog="1" >
+        <console level="10" />
+        <splash level="20" />
+        <file level="10" path="$path/var/log/4gain.log" when="d" interval="1" count="7"/>
+        <syslog level="30" address_ip="10.19.2.18" address_port="514" />
+    </logging>
+
+    <session use_autologin="1">
+        <installation uuid="64d5c56c-c938-4198-9e80-ce8fea3810ed" />
+        <autologin username="v.tatarnikov" password="test" club_select="2" />
+    </session>
+
+
+    <web site_id="1">
+        <!-- Site: pro-4gain -->
+        <debug-toolbar enable="True" intercept_redirects="True" hosts="127.0.0.1" panels="AppRoutes.AppRoutesDebugPanel;Configurate.ConfigurateDebugPanel;HttpHeaders.HttpHeadersDebugPanel;Logging.LoggingDebugPanel;Profiler.ProfilerDebugPanel;SQLAlchemy.SQLAlchemyDebugPanel;Template.TemplateDebugPanel;Timer.TimerDebugPanel;Versions.VersionsDebugPanel" />
+
+        <google-api gmap="AIzaSyBUxH5_DlaI8DpyfOR-wVPlb_nOFKNR-ew" />
+
+        <application import_name="forGain"
+             static_url_path="/static"
+             static_folder="$apache/share/web/pro-4gain/4gain.web/static"
+             static_folder_master="$apache/share/static"
+             template_folder="$apache/share/web/pro-4gain/4gain.web/templates/default"
+             template_folder_master="$apache/share/templates/default"/>
+
+        <module-session key="F21Zr47j\3yX R~X@H!jmM]Lwf/,?KT" />
+        <module-club club_id="" />
+        <module-payment  />
+
+        <analytics-google enable="False" />
+        <analytics-yandex enable="False" />
+    </web>
+
+</configuration>
+

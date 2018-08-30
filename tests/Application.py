@@ -30,7 +30,8 @@ import Scopuli.Interfaces.WEB.Jinja.Extensions as JinjaExt
 import Scopuli.Interfaces.WEB.Jinja.Filters as JinjaFil
 
 import Scopuli.WEB.Application as WebApplication
-import Scopuli.WEB.Application.Modules as WebModules
+import ApplicationModules as WebModules
+import ApplicationWidgets as WebWidgets
 
 
 log = logging.getLogger(__name__)

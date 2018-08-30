@@ -22,7 +22,7 @@ from sqlalchemy import null
 
 
 from Scopuli.Interfaces.WEB.Widget import WebWidget
-import Interfaces.MySQL.Schema.Web.Widget.Menu as Schema
+import Scopuli.Interfaces.MySQL.Schema.Web.Widget.Menu as Schema
 
 
 class WebWidgetMenu(WebWidget):

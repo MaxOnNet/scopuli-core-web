@@ -17,8 +17,7 @@
 
 from Scopuli.Interfaces.MySQL.SQLAlchemy import *
 
-from Scopuli.Interfaces.MySQL.Schema.Main import Base
-from Scopuli.Interfaces.MySQL.Schema.Web.Main import WebSite, WebPage
+from Scopuli.Interfaces.MySQL.Schema.Web.Core import WebSite, WebPage
 
 
 class WebWidgetMenu(Base, Schema):

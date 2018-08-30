@@ -78,13 +78,13 @@ class Application(Flask):
             </configuration>
 
     """
-    
+    _config_file = "./config.xml"
     
     def __init__(self):
         """
 
         """
-        self._config = Config()
+        self._config = Config(path=self._config_file)
         
         self._logging_init()
         

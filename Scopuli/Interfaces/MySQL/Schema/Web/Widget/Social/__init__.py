@@ -17,8 +17,7 @@
 
 from Scopuli.Interfaces.MySQL.SQLAlchemy import *
 
-from Scopuli.Interfaces.MySQL.Schema.Main import Base
-from Scopuli.Interfaces.MySQL.Schema.Web.Main import WebSite
+from Scopuli.Interfaces.MySQL.Schema.Web.Core import WebSite
 
 
 class WebWidgetSocialType(Base, Schema):

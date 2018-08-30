@@ -124,8 +124,8 @@ class WebModule:
 
     @staticmethod
     def module_load(page):
-        module_list = page.application._config.get("web", "application", "module_list", "Scopuli.WEB.Application.Modules")
-        module = getattr(import_module(module_list), page.code)
+        #module_list = page.application._config.get("web", "application", "module_list", "Scopuli.WEB.Application.Modules")
+        module = getattr(import_module("ApplicationModules"), page.code)
     
         if module:
             return module(page.application, page)

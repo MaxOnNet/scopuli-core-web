@@ -31,7 +31,7 @@ class MetaInfoExtension(Extension):
 
 
     def parse(self, parser):
-        token = parser.stream.next()
+        token = next(parser.stream)
         lineno = token.lineno
 
         meta = parser.parse_statements(['name:endmeta'], drop_needle=True)
@@ -60,7 +60,7 @@ class WidgetExtension(Extension):
     tags = set(['widget'])
 
     def parse(self, parser):
-        parser_token = parser.stream.next()
+        parser_token = next(parser.stream)
         parser_lineno = parser_token.lineno
         
         node = nodes.Scope(lineno=parser_lineno)
@@ -96,7 +96,7 @@ class WidgetExtension(Extension):
 
 
     def _widget_onload(self, widget_array, widget_name, widget_config, widget_uuid, caller):
-        widget_module = "WEB.Widgets"
+        widget_module = "ApplicationWidgets"
         widget = getattr(import_module(widget_module), widget_name)
         
         if widget:
